@@ -45,6 +45,7 @@ for imag in range( NombreDImages ):
     ax.set_xlabel('positions x', fontsize  = 20)
     ax.set_ylabel('positions y', fontsize  = 20)
     ax.plot(XPos, YPos, 'o', color='red', markersize = 10 ) # dessine les points de donnees
+    ax.text( 4., 0.25, "image %i sur %i" % (imag, NombreDImages), horizontalalignment = 'center', verticalalignment = 'center')
     FileName = ImagPath + "%04i.png" % imag
     plt.savefig(FileName)
     plt.clf()
